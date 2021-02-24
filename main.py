@@ -21,6 +21,12 @@ async def pfp(ctx, member: discord.Member):
     embed.set_image(url=member.avatar_url)
     await ctx.send(embed=embed)
 
+@client.command()
+async def myid(ctx):
+    
+    await ctx.guild.member_count send
+
+
 
 @client.command()
 async def servericon(ctx):
