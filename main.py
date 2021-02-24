@@ -3,9 +3,7 @@ from discord.ext import commands
 import os
 import json
 
-
 client = commands.Bot(command_prefix='!')
-
 
 
 @client.event
@@ -22,7 +20,6 @@ async def pfp(ctx, member: discord.Member):
     embed = discord.Embed(title= member.display_name + "'s" + ' profile picture', description=None, color=0x000000)
     embed.set_image(url=member.avatar_url)
     await ctx.send(embed=embed)
-
 
 
 @client.command()
@@ -44,7 +41,6 @@ async def botinfo(ctx):
 
     await ctx.message.channel.send(embed=embed)
 
-  
 
 @client.command(name='kick', pass_ctx = True)
 @commands.has_permissions(kick_members=True)
@@ -52,7 +48,6 @@ async def kick(ctx, member: discord.Member):
 
     await member.kick()
     await ctx.send('gay nigga ' + member.display_name + ' got kicked lmao')
-
 
 
 @client.command(name='ban', pass_ctx=True)
@@ -66,8 +61,6 @@ async def ban(ctx, member: discord.Member, *, reason=None):
 
  await ctx.message.channel.send(embed=myEmbed)
  
-
-
 @client.command()
 @commands.has_permissions(ban_members=True)
 async def unban(ctx, *, member, reason=None):
@@ -82,9 +75,4 @@ async def unban(ctx, *, member, reason=None):
  			await ctx.channel.send(f"unbanned the biggest gay: {user.mention}")
 
 
-
-
-
-
-   
 client.run(os.environ[TOKEN])
