@@ -8,7 +8,7 @@ client = commands.Bot(command_prefix='!')
 
 @client.event
 async def on_ready():
-    await client.change_presence(activity=discord.Game('Dev : Free Memes#0001'))
+    await client.change_presence(activity=discord.Game('Dev: Free Memes#0001'))
 
 @client.command(name='invite',pass_context=True)
 async def invite(ctx, *argument):
