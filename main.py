@@ -2,12 +2,11 @@ import discord
 from discord.ext import commands
 import os
 import json
-from dotenv import load_dotenv
+
 
 client = commands.Bot(command_prefix='!')
 
-load_dotenv()
-TOKEN = os.getenv
+
 
 @client.event
 async def on_ready():
